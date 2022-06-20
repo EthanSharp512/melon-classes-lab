@@ -11,10 +11,11 @@ class WatermelonOrder(MelonOrder):
 
     def get_price(self, qty):
 
-        total = 5 * qty
+        total = self.get_base_price() * qty
         if qty >= 5:
             total = total * 0.75
         return total
+
 
 class CantaloupeOrder(MelonOrder):
     species = "Cantaloupe"
@@ -24,11 +25,10 @@ class CantaloupeOrder(MelonOrder):
     seasons = ["Spring", "Summer"]
 
     def get_price(self, qty):
-        """Calculate price, given a number of melons ordered."""
 
-        total = 0
-
+        total = self.get_base_price() * qty
         return total
+
 
 class CasabaOrder(MelonOrder):
     species = "Casaba"
@@ -38,11 +38,10 @@ class CasabaOrder(MelonOrder):
     seasons = ["Spring", "Summer", "Fall", "Winter"]
 
     def get_price(self, qty):
-        """Calculate price, given a number of melons ordered."""
 
-        total = 0  # TODO, calculate the real amount!
-
+        total = self.get_base_price() * qty
         return total
+
 
 class SharlynOrder(MelonOrder):
     species = "Sharlyn"
@@ -52,10 +51,8 @@ class SharlynOrder(MelonOrder):
     seasons = ["Summer"]
 
     def get_price(self, qty):
-        """Calculate price, given a number of melons ordered."""
-
-        total = 0  # TODO, calculate the real amount!
-
+        
+        total = self.get_base_price() * qty
         return total
 
 class SantaClausOrder(MelonOrder):
@@ -66,11 +63,10 @@ class SantaClausOrder(MelonOrder):
     seasons = ["Spring", "Winter"]
 
     def get_price(self, qty):
-        """Calculate price, given a number of melons ordered."""
 
-        total = 0  # TODO, calculate the real amount!
-
+        total = self.get_base_price() * qty
         return total
+        
 
 class ChristmasOrder(MelonOrder):
     species = "Christmas"
@@ -80,11 +76,10 @@ class ChristmasOrder(MelonOrder):
     seasons = ["Spring", "Winter"]
 
     def get_price(self, qty):
-        """Calculate price, given a number of melons ordered."""
 
-        total = 0  # TODO, calculate the real amount!
-
+        total = self.get_base_price() * qty
         return total
+
 
 class HornedMelonOrder(MelonOrder):
     species = "Horned Melon"
@@ -94,11 +89,10 @@ class HornedMelonOrder(MelonOrder):
     seasons = ["Summer"]
 
     def get_price(self, qty):
-        """Calculate price, given a number of melons ordered."""
 
-        total = 0  # TODO, calculate the real amount!
-
+        total = self.get_base_price() * qty
         return total
+
 
 class XiguaOrder(MelonOrder):
     species = "Xigua"
@@ -108,11 +102,10 @@ class XiguaOrder(MelonOrder):
     seasons = ["Summer"]
 
     def get_price(self, qty):
-        """Calculate price, given a number of melons ordered."""
 
-        total = 0  # TODO, calculate the real amount!
-
+        total = self.get_base_price() * qty
         return total
+
 
 class OgenOrder(MelonOrder):
     species = "Ogen"
@@ -122,8 +115,6 @@ class OgenOrder(MelonOrder):
     seasons = ["Spring", "Summer"]
 
     def get_price(self, qty):
-        """Calculate price, given a number of melons ordered."""
 
-        total = 0  # TODO, calculate the real amount!
-
+        total = self.get_base_price() * qty
         return total

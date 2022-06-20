@@ -39,7 +39,7 @@ class CasabaOrder(MelonOrder):
 
     def get_price(self, qty):
 
-        total = self.get_base_price() * qty
+        total = (self.get_base_price() + 1) * qty
         return total
 
 
@@ -116,5 +116,5 @@ class OgenOrder(MelonOrder):
 
     def get_price(self, qty):
 
-        total = self.get_base_price() * qty
+        total = (self.get_base_price() + 1) * qty
         return total

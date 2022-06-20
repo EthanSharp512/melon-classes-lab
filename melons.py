@@ -2,6 +2,8 @@ class MelonOrder:
     def get_base_price(self):
         return 5.0
 
+        
+
 class WatermelonOrder(MelonOrder):
     species = "Watermelon"
     color = "green"
@@ -12,7 +14,7 @@ class WatermelonOrder(MelonOrder):
     def get_price(self, qty):
 
         total = self.get_base_price() * qty
-        if qty >= 5:
+        if qty >= 3:
             total = total * 0.75
         return total
 
@@ -27,6 +29,8 @@ class CantaloupeOrder(MelonOrder):
     def get_price(self, qty):
 
         total = self.get_base_price() * qty
+        if qty >= 5:
+            total = total * 0.5
         return total
 
 
